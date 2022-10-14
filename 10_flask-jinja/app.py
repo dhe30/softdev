@@ -1,6 +1,11 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+"""
+TEAM FLASKERS - Harry ZHu, Kevin Wang, Daniel He
+SoftDev
+k10 -- Using a template
+2022-10-07
+time spent: 0.5 hrs
+
+"""
 '''
 0. Prediction: only "/" route works, but the other one will produce an error message
    Actual: same as prediction 
