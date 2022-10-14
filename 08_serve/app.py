@@ -21,8 +21,7 @@ QCC:
 HOW THIS SCRIPT WORKS:
 1. Imports flask and occupation, where occupation.py represents the functions for lab 07
 2. Creates a flask app
-3. In the global scope, parses out the list of occupations from the dictionary of occupations to percentages 
-and adds it to a string, string_of_occupations. The list of occupations never changes granted the occupations stays the same.
+3. In the global scope, parses out the list of occupations from the dictionary of occupations to percentages and adds it to a string, string_of_occupations
 4. In the home route of flask, define the function random_occupation, which returns a string consisting of the TNPG + roster + results of generating a random occupation + list of occupations
 
 """
