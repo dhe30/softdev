@@ -27,19 +27,20 @@ def disp_loginpage():
     print(request.args) #ImmutableMultiDict([])
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
-    #BadRequestKeyError, username not defined?
-    print("AAAAAAAAAAAAAAA")
-    print(request.form)
+    #BadRequestKeyError, username not defined?    
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return render_template( 'login.html' )
+    if request.method == 'POST':
+        print("AAAAAAAAAAAAAAA")
+    else: 
+        print("EEEEEEEEEEEE")
+        return render_template( 'login.html' )
+
 
 
 @app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     print("\n\n\n")
-    print("AAAAAAAAAAAAAAA")
-    print(request.form)
     print("***DIAG: this Flask obj ***")
     print(app)
     print("***DIAG: request obj ***")
