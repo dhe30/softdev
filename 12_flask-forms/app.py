@@ -3,7 +3,7 @@ Green Monkeys; Daniel He, Faiyaz Rafee
 SoftDev
 K12 -- Flask forms
 2022-10-17
-time spent:
+time spent: 1 hr
 '''
 
 from flask import Flask             #facilitate flask webserving
