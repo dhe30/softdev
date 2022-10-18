@@ -3,7 +3,6 @@
   Clyde 'Thluffy' Sinclair
   SoftDev
   Oct 2022
-
      simple demo of HTML forms via Flask
      
      trioTASK:
@@ -19,23 +18,16 @@
 <html>
 
   <head>
-    <title> LOGIN PAGE </title>
+    <title> RESPONSE PAGE </title>
   </head>
 
   <body>
     <h1>Team Green Monkeys: Daniel He, Faiyaz Rafee</h1>
     <h2>
-      Welcome, Travelers of the Intertoobz!
+      Greetings, Fellow thinkeren: {{user}}
     </h2>
-
-
-    <h3>
-      Enter your username below to proceed.
-    </h3>
-    <form action="/auth" method = "post">
-      <input type="text" name="username">
-      <input type="submit" name="sub1">
-    </form>
+    <h3>Request: {{request_method}}</h3>
+    </h1>
     <h4>A GET request is used to retrieve data from a web server, and the parameters are appended to the URL.</h4>
     <h4>A POST request sends form data to the server</h4>
     <br>

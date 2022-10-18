@@ -46,12 +46,13 @@ def authenticate():
     print("***DIAG: request obj ***")
     print(request)
     print("***DIAG: request.args ***")
-    print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    print(request.args['username']) #returns form input, input appears in domain address
+    # print(request.args)
+    # print("***DIAG: request.args['username']  ***")
+    # print(request.args['username']) #returns form input, input appears in domain address
+    username = request.form.get("username")
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    return render_template( 'response.html', user = username, request_method = request.method )
 
 
     
