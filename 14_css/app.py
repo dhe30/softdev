@@ -3,7 +3,7 @@ Green Monkeys; Daniel He, Faiyaz Rafee
 SoftDev
 K12 -- Flask forms
 2022-10-17
-time spent: 1 hr
+time spent: 0.5 hr
  -->'''
 
 from flask import Flask, render_template
