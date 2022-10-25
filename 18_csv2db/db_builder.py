@@ -19,11 +19,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 courses = csv.DictReader(open("courses.csv", "r"))
 c.execute("create table courses (code TEXT, mark INTEGER, id INTEGER);")
 for course in courses: # creates an object where each row is a dictonary
-    print("" + 1)
-    print(course['code'])
-    print(course['mark'])
-    print(course['id'])
-    command = "insert into courses values (" + course['code'] + ", " + int(course['mark']) + ", " + int(course['id']) + ");"          # test SQL stmt in sqlite3 shell, save as string
+    command = "insert into courses values (\"" + course['code'] + "\", " + course['mark'] + ", " + course['id'] + ");"          # test SQL stmt in sqlite3 shell, save as string
     print(command)
     c.execute(command)    # run SQL statement
 
