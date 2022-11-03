@@ -23,7 +23,10 @@ def reading_it(a):
         courses = csv.DictReader(file)
         table_name = a[:-4]
         print(table_name)
-        c.execute("create table " + table_name + " (code TEXT, mark INTEGER, id INTEGER);")
+        if a == "courses.csv":
+            c.execute("create table " + table_name + " (code TEXT, mark INTEGER, id INTEGER);")
+        else:
+            c.execute("create table " + table_name + " (name TEXT, age INTEGER, id INTEGER);")
         for course in courses: # creates an object where each row is a dictonary
             if a == "courses.csv":
                 command = "insert into " + table_name + " values (\"" + course['code'] + "\", " + course['mark'] + ", " + course['id'] + ");"          # test SQL stmt in sqlite3 shell, save as string
