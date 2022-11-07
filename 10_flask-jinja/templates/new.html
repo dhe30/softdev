@@ -12,10 +12,11 @@
   </head>
 
   <body>
-    for item in collection 
-      item 
+    {% for item in collection %}
+     {{ item }}
      <br>
     {% endfor %}
+    {{poo | safe}}
   </body>
 
 </html>

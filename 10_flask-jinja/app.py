@@ -21,10 +21,11 @@ def hello_world():
     return "No hablo queso!"
 
 coll = [0,1,1,2,3,5,8]
+poop = f"<p> <b>DIEIEIEIIEIEIIEIEI</b></p>"
 
 @app.route("/my_foist_template") #Q1: Can all of your teammates confidently predict the URL to use to load this page?
 def test_tmplt():
-    return render_template( 'new.html', foo="fooooo", collection=coll) #Q2: What is the significance of each argument? Simplest, most concise answer best.
+    return render_template( 'new.html', foo="fooooo", collection=coll, poo = poop) #Q2: What is the significance of each argument? Simplest, most concise answer best.
 
 if __name__ == "__main__":
     app.debug = True
