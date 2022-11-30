@@ -1,0 +1,27 @@
+TNPG: ConferenceCereal, Roster: Daniel He, Samson Wu
+SoftDev
+K23 -- A Day of Noodling
+2022-11-28
+time spent: 
+
+DISCOS:
+*text-center class centers the whole text (can do text-left and others)
+*you can put multiple classes
+Top Bar:
+*Dropdown menu requires JS
+Table:
+*containing a table in a div class tabkle-scroll will unlock table scrolling
+Pagination:
+*you can center a pagination by adding text-center to the pagination ul class
+*The pages in the ellipsis are not accesible.
+*li class current boxes the current page in blue
+Breadcrumbs:
+*Useful for showing and linking navigation path
+*Takes time because you have to manually add each path
+Media Objects:
+*Nest media objects in media objects
+*Can separate media objects into sections with div class media-object-section <middle, bottom, ...>
+Grids:
+*the div class grid-x uses another div class named cell to create sections
+*these cells add up to 12 and you can specify the cell sizes according to the window size (small, medium, large)
+*you can also auto size them using div class cell auto
