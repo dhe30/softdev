@@ -6,6 +6,7 @@ time spent:
 
 QCC: 
 * what is crossorigin and integrity attributes of link tag? 
+* who is aria?
 
 DISCOS:
 * text-center class centers the whole text (can do text-left and others)
