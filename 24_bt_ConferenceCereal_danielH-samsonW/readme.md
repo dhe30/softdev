@@ -19,3 +19,10 @@ DISCOS:
  * cool blue box around button can be added by additionally adding "btn-primary"
 * Alert: class "alert" makes an alert in a div
  * additionally adding "alert-danger" makes it red
+
+q0: 1
+* neighbor
+* readme 
+
+q1: Foundation
+* They are similar but Bootstrap has too many confusing classes 
