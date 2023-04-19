@@ -3,7 +3,7 @@ Green Monkeys; Daniel He, Faiyaz Rafee
 SoftDev
 K19 -- Cookies
 2022-11-3
-time spent:
+time spent: 1.5 hrs
 '''
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -34,7 +34,7 @@ def sessionCreate():
 @app.route("/logout", methods=["GET","POST"])
 def logout():
     if request.method == "GET":
-        session.pop("username", None) #pop to remove things from session 
+        session.pop("username") #pop to remove things from session 
     else: 
         print("Something horribly wrong in logout route, post request instead of get")
     return redirect("/") #redirects to another route so the url makes sense and doesn't say logout 
