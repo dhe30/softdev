@@ -110,11 +110,19 @@ function gcd(a,b) {
 
 //addItem("gcd(27,36): " + gcd(27,36))
 
-var button = document.getElementById("b");
+//looks at button with the corresponding id
+var button = document.getElementById("fib");
+//second parameter needs to be wrapped in a function, or else it is called automatically when the DOm renders 
 button.addEventListener('click', ()=>{
-  // addItem("fib(5): " + fib(5));
-  // addItem("fac(5): " + fac(5));
-  // addItem("gcd(27,36): " + gcd(27,36));
+  addItem("fib(5): " + fib(5));
+});
+var button = document.getElementById("fac");
+button.addEventListener('click', ()=>{
+  addItem("fac(5): " + fac(5));
+});
+var button = document.getElementById("gcd");
+button.addEventListener('click', ()=>{
+  addItem("gcd(27,36): " + gcd(27,36));
 });
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
