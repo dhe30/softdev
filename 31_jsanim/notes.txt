@@ -1,0 +1,16 @@
+;// Team Liability Tease:: Daniel He, Nada Haseed, Sir, Ray
+SoftDev pd2
+// K31 -- js animation 
+2023-04-25t
+
+DISCO
+-----------------------------------------------------------------
+* requestAnimationFrame requires a parameter that is a method that calls another requestAnimationFrame, like recursion 
+* requestAnimationFrame returns a unique identifier called requestID
+* cancelAnimationFrame requires a requestID to cancel 
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* Why does the circle animation speed up with succeeding presses of the animation button? 
+=================================================================

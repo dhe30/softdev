@@ -8,7 +8,7 @@ var stopButton = document.getElementById("buttonStop");
 
 var ctx = c.getContext("2d");
 
-ctx.fillStyle = '#ff0000';
+ctx.fillStyle = '#7FFFD4';
 
 //global var for use with animation frames
 var requestID;
@@ -25,7 +25,7 @@ var drawDot = () => {
     clear();
     //repaint the circle
     ctx.beginPath();
-    ctx.arc(300, 300, radius, 0, 2 * Math.PI);
+    ctx.arc(c.clientWidth / 2, c.clientHeight / 2, radius, 0, 2 * Math.PI);
     ctx.fill();
     ctx.stroke();
     if (growing){
@@ -37,13 +37,12 @@ var drawDot = () => {
     if (radius == (c.clientWidth / 2) || radius == 0){
         growing = !growing;
     }
-    //window.cancelAnimationFrame(requestID);
+    window.cancelAnimationFrame(requestID);
     requestID = window.requestAnimationFrame(drawDot);
 }
 
 //var stopIt = function
 var stopIt = () => {
-
     window.cancelAnimationFrame(requestID);
 }
 
