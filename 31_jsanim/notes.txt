@@ -1,16 +1,20 @@
-;// Team Liability Tease:: Daniel He, Nada Haseed, Sir, Ray
+Team UHhh - FMC, JM
 SoftDev pd2
-// K31 -- js animation 
-2023-04-25t
+K31 -- Paint, Paint, Paint
+2023-04-26w
 
 DISCO
 -----------------------------------------------------------------
-* requestAnimationFrame requires a parameter that is a method that calls another requestAnimationFrame, like recursion 
-* requestAnimationFrame returns a unique identifier called requestID
-* cancelAnimationFrame requires a requestID to cancel 
+* cancelling the animation frame before requesting a new one
+prevents the circle's multiplied growth phenomenon
+* the param for the requestAnimationFrame() is a function name
+* you must clear the canvas before updating the canvas to a
+different image in the animation. 
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why does the circle animation speed up with succeeding presses of the animation button? 
+* What's the benefit of using requestAnimationFrame() instead of
+a regular recursion?
 =================================================================
+

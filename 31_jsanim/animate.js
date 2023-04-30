@@ -1,50 +1,60 @@
-//heading
+// Team UHhh - FMC, JM
+// SoftDev pd2
+// K31 -- Paint, Paint, Paint
+// 2023-04-26w
 
 var c = document.getElementById("playground");
-//get dot button
 var dotButton = document.getElementById("buttonCircle");
-//stop button
 var stopButton = document.getElementById("buttonStop");
 
 var ctx = c.getContext("2d");
+ctx.fillStyle = "#00FFFF";
 
-ctx.fillStyle = '#7FFFD4';
-
-//global var for use with animation frames
-var requestID;
+var requestID; // init global var
 
 var clear = (e) => {
-    ctx.clearRect(0,0,c.clientWidth,c.clientHeight)
+  // console.log("wiping canvas...");
+  ctx.clearRect(0, 0, 500, 500);
 };
 
 var radius = 0;
 var growing = true;
 
 var drawDot = () => {
-    //clear
-    clear();
-    //repaint the circle
-    ctx.beginPath();
-    ctx.arc(c.clientWidth / 2, c.clientHeight / 2, radius, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.stroke();
-    if (growing){
-        radius++;
+  // console.log("start drawing...");
+  stopIt();
+
+  var draw = () => {
+    if (radius == 250) {
+      growing = false;
+    }
+    if (radius == 0) {
+      growing = true;
+    }
+  
+    if (growing) {
+      radius = radius + 1;
     } else {
-        radius--;
+      radius = radius - 1;
     }
+  
+    clear();
+    ctx.beginPath();
+    ctx.arc(250, 250, radius, 0, 2 * Math.PI);
+    ctx.fill();
+    // ctx.stroke();
+    
+    requestID = window.requestAnimationFrame(draw);
+  }
 
-    if (radius == (c.clientWidth / 2) || radius == 0){
-        growing = !growing;
-    }
-    window.cancelAnimationFrame(requestID);
-    requestID = window.requestAnimationFrame(drawDot);
-}
+  requestID = window.requestAnimationFrame(draw);
+};
 
-//var stopIt = function
 var stopIt = () => {
-    window.cancelAnimationFrame(requestID);
-}
+  // console.log("stopping it...");
+  console.log(requestID);
+  window.cancelAnimationFrame(requestID)
+};
 
-dotButton.addEventListener( "click", drawDot);
-stopButton.addEventListener( "click", stopIt);
+dotButton.addEventListener("click", drawDot);
+stopButton.addEventListener("click", stopIt);
